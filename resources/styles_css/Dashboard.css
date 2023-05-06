@@ -5,20 +5,34 @@
 }
 
 body{
-    background-color: rgb(194, 235, 211);
+    background-color: rgb(203, 241, 219);
 }
 
-#sub-bg-pagina {
+#sub-bg-page {
+    background-color: rgb(194, 235, 211);
     width: 75%;
     height: 100%;
-    min-height: 960px;
     margin: auto;
     border-left: 1px solid rgba(184, 181, 181, 0.267);
     border-right: 1px solid rgba(184, 181, 181, 0.267);
-    box-shadow: 0px 13px 65px #8888886b;
+    box-shadow: 0px 15px 65px #88888881;
 }
 
-img {
-    display: block;
+.img-slide{
     margin: auto;
-  }
+    width: 99%;
+    min-height: 10rem;
+    max-height: 25rem;
+}
+
+.img-presentation{
+    padding: 5px 5px !important;
+    min-height: 75px;
+    max-height: 175px;
+}
+
+.img-profiles{
+    padding: 5px 5px !important;
+    min-height: 100px !important;
+    max-height: 300px;
+}
