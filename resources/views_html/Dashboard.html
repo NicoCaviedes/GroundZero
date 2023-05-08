@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
   <link rel="stylesheet" href="/resources/styles_css/StyleBase.css">
   <link rel="stylesheet" href="/resources/styles_css/FooterStyle.css">
-  <link rel="stylesheet" href="/resources/styles_css/NavBar.css">
 
   <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
   <!-- END LINKS APP -->
@@ -22,60 +21,74 @@
 </head>
 <body class="container-fluid">
 
-  <header>
-		<div id="logo"><img src="/resources/imgs/logos/circle.svg" alt="Homepage"></div>
-		<!-- <div id="logo">
-      <svg height="0" width="0">
-        <circle cx="50" cy="50" r="40" fill="#c1e9d2" />
-      </svg> 
-    </div> -->
+  <header class="container-fluid">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5">
+      <img class="navbar-brand" src="/resources/imgs/logos/circle.svg" alt="Ground Zero">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="cart-icon">
+          <i class="fa-solid fa-cart-shopping fa-2xl fa-flip-horizontal" style="color: #cbf1db;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Proyectos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item disabled" href="#">Ecos del Pincel</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item disabled" href="#">Esencia Creativa</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item disabled" href="#">Arte en Evolución</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item disabled" href="#">Reflejos Culturales</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item disabled" href="#">Ver todos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Nosotros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Conocenos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sede</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Contacto</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Perfil
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Visualizar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Modificar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Ver Articulos Propios</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Seguridad</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resources/views_html/ContactoEmp.html">Contacto</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control mr-2" type="search" placeholder="Escribe Aquí..." aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
 
-		<div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
-		<div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>
-	</header>
-
-  <nav id="main-nav">
-    <ul>
-      <li><a class="current" href="#0">Home</a></li>
-      <li><a href="#0">About</a></li>
-      <li><a href="#0">Services</a></li>
-      <li><a href="#0">Gallery</a></li>
-      <li><a href="#0">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div id="cd-shadow-layer"></div>
-
-	<div id="cd-cart">
-		<h2>Carrito de Compra</h2>
-		<ul class="cd-cart-items">
-			<li>
-				<span class="cd-qty">1x</span> Product Name
-				<div class="cd-price">$9.99</div>
-				<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-			</li>
-
-			<li>
-				<span class="cd-qty">2x</span> Product Name
-				<div class="cd-price">$19.98</div>
-				<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-			</li>
-
-			<li>
-				<span class="cd-qty">1x</span> Product Name
-				<div class="cd-price">$9.99</div>
-				<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-			</li>
-		</ul> <!-- cd-cart-items -->
-
-		<div class="cd-cart-total">
-			<p>Total <span>$39.96</span></p>
-		</div> <!-- cd-cart-total -->
-
-		<a href="#0" class="checkout-btn">Comprar</a>
-		
-		<p class="cd-go-to-cart"><a href="#0">Ir a carrito de compras</a></p>
-	</div> <!-- cd-cart -->
+    </nav>
+  </header>
 
   <main>
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -390,7 +403,6 @@
 
   <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
   <script src="/resources/functions_js/funDashboard.js"></script>
-  <script src="/resources/functions_js/navBar.js"></script>
   <!-- END IMPORT JS FILES -->
 
 </body>

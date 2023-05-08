@@ -30,6 +30,16 @@
     max-height: 300px;
 }
 
+.navbar-toggler {
+    position: relative;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 0;
+    right: 50px; /* Ajusta la posición según tus necesidades */
+}
+
 /*=============== SECTION CATEGORIAS ===============*/
 
 .container-p {
