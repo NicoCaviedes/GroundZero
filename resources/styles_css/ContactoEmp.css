@@ -30,7 +30,7 @@ ul {
 }
 
 .logo span {
-    color: #B70E21;
+     color: #65a37f; /*#B70E21  */
 }
 
 .contact-wrapper {
@@ -42,7 +42,7 @@ ul {
 }
 
 .contact-form {
-    background: #222222;
+    background: #3b4046;
     color: #fff;
     
 }
@@ -78,7 +78,7 @@ ul {
 }
 
 .contact-form form button {
-    background: #B70E21;
+    background: #65a37f;
     border: 0;
     text-transform: uppercase;
     padding: 1em;
@@ -86,7 +86,7 @@ ul {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background: #d63031;
+    background: #65a37f;
     color: #fff;
     transition: background-color 1s ease-out;
     outline: 0;
@@ -94,7 +94,7 @@ ul {
 
 /* CONTACT INFO */
 .contact-info {
-    background: #9fc222;
+    background: #65a37f;
 }
 
 .contact-info h4, .contact-info ul, .contact-info p {
@@ -119,4 +119,10 @@ ul {
     .contact-info p {
         text-align: left;
     }
+}
+
+hr {
+    height: 10px;
+    width: 100%;
+    background-color: #000000;
 }
