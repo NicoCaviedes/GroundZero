@@ -13,7 +13,7 @@
   
   <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
   <link rel="stylesheet" href="/resources/styles_css/StyleBase.css">
-  <link rel="stylesheet" href="/resources/styles_css/FooterStyle.css">
+  <link rel="stylesheet" href="/resources/styles_css/Footer.css">
 
   <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
   <!-- END LINKS APP -->
@@ -24,11 +24,8 @@
   <header class="container-fluid">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5">
       <img class="navbar-brand" src="/resources/imgs/logos/circle.svg" alt="Ground Zero">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <button id="nav-btn-collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        <span class="cart-icon">
-          <i class="fa-solid fa-cart-shopping fa-2xl fa-flip-horizontal" style="color: #cbf1db;"></i>
-        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
@@ -78,8 +75,19 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/resources/views_html/ContactoEmp.html">Productos</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="/resources/views_html/ContactoEmp.html">Contacto</a>
           </li>
+          <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="/resources/views_html/LoginAndRegister.html" role="button" aria-pressed="true">Iniciar Sesion</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-success" href="/resources/views_html/ContactoEmp.html" role="button" aria-pressed="true">Cerrar Sesion</a>
+          </li> -->
         </ul>
         <form class="d-flex">
           <input class="form-control mr-2" type="search" placeholder="Escribe Aquí..." aria-label="Search">
@@ -87,9 +95,12 @@
         </form>
       </div>
 
+      <span class="navbar-brand position-relative fixed-top ml-4" id="cart-icon">
+        <i class="fa-solid fa-cart-shopping fa-2xl fa-flip-horizontal" style="color: #cbf1db;"></i>
+      </span>
     </nav>
   </header>
-
+  
   <main>
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -120,17 +131,73 @@
 
     <article class="container-fluid">
       
-      <h1>Ultimas Novedades</h1>
-      <p>Las ultimas noticias imperdibles relacionadas con nosotros y nuestros artistas asociados</p>
-      <section class="row row-cols-3 justify-content-center">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a class="btn btn-light" href="#" role="button">Ver Más</a>
-      </section>
+      <div class="">
+        <h1>Ultimas Novedades</h1>
+        <p>Las ultimas noticias imperdibles relacionadas con nosotros y nuestros artistas asociados</p>
+        
+        <section class="row row-cols-3 d-flex justify-content-around">
+          <div class="col card" style="max-width: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+  
+          <div class="col card" style="max-width: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+  
+          <div class="col card" style="max-width: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+  
+          <div class="col card" style="max-width: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+  
+          <div class="col card" style="max-width: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+  
+          <div class="col card" style="max-width: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </section>
+        <a class="row justify-content-center btn btn-light" href="#" role="button">Ver Más</a>
+      </div>
 
       <h1>Conoce nuestra cooperativa </h1> 
       <p>Las obras creadas por cada artista son únicas e inigualables, te invitamos a revisar el catálogo a continuación</p>
@@ -402,7 +469,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 
   <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
-  <script src="/resources/functions_js/funDashboard.js"></script>
+  <script src="/resources/functions_js/dashboard.js"></script>
   <!-- END IMPORT JS FILES -->
 
 </body>
