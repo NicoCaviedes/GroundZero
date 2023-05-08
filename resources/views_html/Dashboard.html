@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
   <link rel="stylesheet" href="/resources/styles_css/StyleBase.css">
   <link rel="stylesheet" href="/resources/styles_css/Footer.css">
+  <link rel="stylesheet" href="/resources/styles_css/Event.css">
 
   <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
   <!-- END LINKS APP -->
@@ -22,7 +23,7 @@
 <body class="container-fluid">
 
   <header class="container-fluid">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5 fixed-top ">
       <img class="navbar-brand" src="/resources/imgs/logos/circle.svg" alt="Ground Zero">
       <button id="nav-btn-collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,7 +58,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Sede</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Contacto</a></li>
+              <li><a class="dropdown-item" href="/resources/views_html/ContactoEmp.html">Contacto</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -75,12 +76,9 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/resources/views_html/ContactoEmp.html">Productos</a>
+            <a class="nav-link" href="#">Productos</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/resources/views_html/ContactoEmp.html">Contacto</a>
-          </li>
           <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
           <li class="nav-item">
             <a class="nav-link text-warning" href="/resources/views_html/LoginAndRegister.html" role="button" aria-pressed="true">Iniciar Sesion</a>
@@ -131,226 +129,422 @@
 
     <article class="container-fluid">
       
-      <div class="">
+      <div class="tarjeta">
         <h1>Ultimas Novedades</h1>
         <p>Las ultimas noticias imperdibles relacionadas con nosotros y nuestros artistas asociados</p>
         
-        <section class="row row-cols-3 d-flex justify-content-around">
-          <div class="col card" style="max-width: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+        <section class="container-fluid row row-cols-3 justify-content-around">
+          <div class="col cards-info">
+            <h2>Noticia 1</h2>
+            <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+            </p>
+            <p>Fecha: 12/02/2023</p>
+            <a href="#" class="btn btn-outline-secondary d-flex" role="button" aria-pressed="true">Leer Más</a>
           </div>
-  
-          <div class="col card" style="max-width: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+          <div class="col cards-info">
+            <h2>Noticia 2</h2>
+            <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+            </p>
+            <p>Fecha: 12/02/2023</p>
+            <a href="#" class="btn btn-outline-secondary d-flex" role="button" aria-pressed="true">Leer Más</a>
           </div>
-  
-          <div class="col card" style="max-width: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+          <div class="col cards-info">
+            <h2>Noticia 3</h2>
+            <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+            </p>
+            <p>Fecha: 12/02/2023</p>
+            <a href="#" class="btn btn-outline-secondary d-flex" role="button" aria-pressed="true">Leer Más</a>
           </div>
-  
-          <div class="col card" style="max-width: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+          <div class="col cards-info">
+            <h2>Noticia 4</h2>
+            <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+            </p>
+            <p>Fecha: 12/02/2023</p>
+            <a href="#" class="btn btn-outline-secondary d-flex" role="button" aria-pressed="true">Leer Más</a>
           </div>
-  
-          <div class="col card" style="max-width: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+          <div class="col cards-info">
+            <h2>Noticia 5</h2>
+            <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+            </p>
+            <p>Fecha: 12/02/2023</p>
+            <a href="#" class="btn btn-outline-secondary d-flex" role="button" aria-pressed="true">Leer Más</a>
           </div>
-  
-          <div class="col card" style="max-width: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+        </section>
+      </div>
+
+      <div class="tarjeta">
+        <h1>Conoce nuestra cooperativa </h1> 
+        <p>Las obras creadas por cada artista son únicas e inigualables, te invitamos a revisar el catálogo a continuación</p>
+        <!-- explora nuestras categorias - Pintura - Orfebreria - Tejido Artistico - Escultura - Fotografia -->
+        <section class="row justify-content-center">
+          <div class="container-p ">
+            <div class="panel active">
+              <h3><a href="#holaas">Explora nuestras categorias</a></h3>
+            </div>
+            <div class="panel">
+              <h3><a href="#holaas">Pinturas</a></h3>
+            </div>
+            <div class="panel">
+              <h3><a href="#holaas">Orfebrerias</a></h3>
+            </div>
+            <div class="panel">
+              <h3><a href="#holaas">Tejidos Artisticos</a></h3>
+            </div>
+            <div class="panel">
+              <h3><a href="#holaas">Esculturas</a></h3>
+            </div>
+            <div class="panel">
+              <h3><a href="#holaas">Fotografias</a></h3>
             </div>
           </div>
         </section>
-        <a class="row justify-content-center btn btn-light" href="#" role="button">Ver Más</a>
+      </div>
+      
+      <div class="tarjeta">
+        <h1>Artistas</h1>
+        <p>Los mejores artistas calificados por la comunidad, a continuacion puede revisar y consultar por cada perfil</p>
+        <section class="row row-cols-3 justify-content-around">
+          
+          <div class="col card-profile">
+            <div class="content-prof">
+              <h2 class="title-prof">Brie Larson</h2>
+              <p class="copy-prof">Calificacion: <span>★★★★★</span></p>
+              <p class="copy-prof">Profesion: Escultora</p>
+              <button class="btn-prof">Ver Perfil</button>
+            </div>
+          </div>
+          <div class="col card-profile">
+            <div class="content-prof">
+              <h2 class="title-prof">Chris Evans</h2>
+              <p class="copy-prof">Calificacion: <span>★★★★★</span></p>
+              <p class="copy-prof">Profesion: Orfrebrero</p>
+              <button class="btn-prof">Ver Perfil</button>
+            </div>
+          </div>
+          <div class="col card-profile">
+            <div class="content-prof">
+              <h2 class="title-prof">Chris Pratt</h2>
+              <p class="copy-prof">Calificacion: <span>★★★★☆</span></p>
+              <p class="copy-prof">Profesion: Fotografo</p>
+              <button class="btn-prof">Ver Perfil</button>
+            </div>
+          </div>
+          <div class="col card-profile">
+            <div class="content-prof">
+              <h2 class="title-prof">Elizabeth Olsen</h2>
+              <p class="copy-prof">Calificacion: <span>★★★★☆</span></p>
+              <p class="copy-prof">Profesion: Fotografa</p>
+              <button class="btn-prof">Ver Perfil</button>
+            </div>
+          </div>
+          <div class="col card-profile">
+            <div class="content-prof">
+              <h2 class="title-prof">Robert Downey</h2>
+              <p class="copy-prof">Calificacion: <span>★★★★☆</span></p>
+              <p class="copy-prof">Profesion: Pintor</p>
+              <button class="btn-prof">Ver Perfil</button>
+            </div>
+          </div>
+          <div class="col card-profile">
+            <div class="content-prof">
+              <h2 class="title-prof">Ver más perfiles</h2>
+              <button class="btn-prof">Visualizar</button>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <h1>Conoce nuestra cooperativa </h1> 
-      <p>Las obras creadas por cada artista son únicas e inigualables, te invitamos a revisar el catálogo a continuación</p>
-      <!-- explora nuestras categorias - Pintura - Orfebreria - Tejido Artistico - Escultura - Fotografia -->
-      <section class="row justify-content-center">
-        <div class="container-p ">
-          <div class="panel active" style="background-image: url('/resources/imgs/categorias/PresetCateg.avif');" >
-            <h3>Explora nuestras categorias</h3>
-          </div>
-  
-          <div class="panel" style="background-image: url('/resources/imgs/categorias/PinturaCateg.avif');" >
-            <h3>Pinturas</h3>
-          </div>
-          <div class="panel" style="background-image: url('/resources/imgs/categorias/OrfebreriaCateg.avif');" >
-            <h3>Orfebrerias</h3>
-          </div>
-          <div class="panel" style="background-image: url('/resources/imgs/categorias/TejidoArtisticoCateg.avif');" >
-            <h3>Tejidos Artisticos</h3>
-          </div>
-          <div class="panel" style="background-image: url('/resources/imgs/categorias/EsculturaCateg.avif');" >
-            <h3>Esculturas</h3>
-          </div>
-          <div class="panel" style="background-image: url('/resources/imgs/categorias/FotografiaCateg.avif');" >
-            <h3>Fotografias</h3>
-          </div>
-        </div>
-      </section>
-      
-      <h1>Artistas</h1>
-      <p>Los mejores artistas calificados por la comunidad, a continuacion puede revisar y consultar por cada perfil</p>
-      <section class="row row-cols-3 justify-content-center">
-        
-        <div class="flip-card" tabIndex="0">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="col img-profiles" src="/resources/imgs/artistas/BrieLarson.jpg" alt="...">
-            </div>
-            <div class="flip-card-back">
-              <h3>Whoaaa!!!</h3>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" tabIndex="0">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="col img-profiles" src="/resources/imgs/artistas/Chris Evans.jpg" alt="...">
-            </div>
-            <div class="flip-card-back">
-              <h3>Whoaaa!!!</h3>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" tabIndex="0">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="col img-profiles" src="/resources/imgs/artistas/ChrisPratt.jpg" alt="...">
-            </div>
-            <div class="flip-card-back">
-              <h3>Whoaaa!!!</h3>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" tabIndex="0">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="col img-profiles" src="/resources/imgs/artistas/ElizabethOlsen.jpg" alt="...">
-            </div>
-            <div class="flip-card-back">
-              <h3>Whoaaa!!!</h3>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" tabIndex="0">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="col img-profiles" src="/resources/imgs/artistas/RobertDowney.jpg" alt="...">
-            </div>
-            <div class="flip-card-back">
-              <h3>Whoaaa!!!</h3>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" tabIndex="0">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="col img-profiles" src="/resources/imgs/artistas/ScarlettJohansson.jpg" alt="...">
-            </div>
-            <div class="flip-card-back">
-              <h3>Whoaaa!!!</h3>
-            </div>
-          </div>
-        </div>
+      <div class="tarjeta">
+        <h1>Proximas Sesiones</h1>
+        <section class="row justify-content-center tarjeta-sesion">
+          <div class="arlo arlo-loaded" max-width="1000px" style="position: relative;">
+            <div id="upcoming-events-list1">
+                <ul class="arlo-event-list">
+                    <li class="arlo-event-listitem" id="view7">
+                        <div class="left" max-width="465px 315px" style="position: relative;">
+                            <div class="date">
+                                Wed, 31 May 2023
+                            </div>
+                            <div class="time">
+                                8:30 AM -
+                                10:30 AM
+                            </div>
+                            <div class="location">
 
-        <a class="btn btn-light" href="#" role="button">Ver Más</a>
-      </section>
+                                Sydney
 
-      <h1>Proximas Sesiones</h1>
-      <section class="row justify-content-center">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Día/Mes/Año</th>
-              <th scope="col">Reunion</th>
-              <th scope="col">Motivo</th>
-              <th scope="col">Accion</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">10/05/2023</th>
-              <td>¿Como usar la plataforma?</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td><a class="btn btn-success" href="#" role="button">Inscribirme</a></td>
-            </tr>
-            <tr>
-              <th scope="row">19/05/2023</th>
-              <td>Nuevos Proyectos Mid Year 2023</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td><a class="btn btn-success" href="#" role="button">Inscribirme</a></td>
-            </tr>
-            <tr>
-              <th scope="row">23/05/2023</th>
-              <td>Proyecto: Eco del Pincel</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td><a class="btn btn-success" href="#" role="button">Inscribirme</a></td>
-            </tr>
-            <tr>
-              <th scope="row">31/05/2023</th>
-              <td>Proyecto: Reflejos Culturales V2</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td><a class="btn btn-success" href="#" role="button">Inscribirme</a></td>
-            </tr>
-          </tbody>
-        </table>
-        <nav class="pb-3" aria-label="...">
-          <ul class="pagination">
-            <li class="page-item disabled">
-              <span class="page-link">Previous</span>
-            </li>
-            <li class="page-item active"><span class="page-link">1</span></li>
-            <li class="page-item" aria-current="page">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+                            </div>
+                            <div class="resize-sensor"
+                                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                <div class="resize-sensor-expand"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 190px; height: 254px;">
+                                    </div>
+                                </div>
+                                <div class="resize-sensor-shrink"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="middle">
+                            <h3>Plan your next trip to the moon</h3>
+                            <div class="summary">
+                                Get prepare for your exciting next trip to the moon. Know what you need to do to be
+                                ready for launch.
+                            </div>
+
+                            <div class="presenters">
+                                <span class="presenterlabel">Presented By </span>
+                                <span class="presenter">
+                                    <a href="#"
+                                        class="arlo-text-color-link">Leonard Monaco</a>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="right" style="position: relative;">
+                            <div class="duration">
+                                <span class="label"><i class="fa fa-clock-o" aria-hidden="true"></i></span><span
+                                    class="content">2 hours</span>
+                            </div>
+                            <div class="offers">
+                                <div class="arlo-offer-container ">Free</div>
+                            </div>
+
+                            <div class="registration">
+                                <a class="arlo-event-register"
+                                    href="#">Register</a>
+                                or <a href="#"
+                                    target="_blank">read more</a>
+
+                            </div>
+                            <div class="resize-sensor"
+                                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                <div class="resize-sensor-expand"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 780px; height: 110px;">
+                                    </div>
+                                </div>
+                                <div class="resize-sensor-shrink"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script
+                            type="application/ld+json">{"@context":"http://schema.org","@type":"Event","name":"Plan your next trip to the moon","startDate":"2023-05-31T08:30:00.0000000+11:00","endDate":"2023-05-31T10:30:00.0000000+11:00","url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon","description":"Get prepare for your exciting next trip to the moon. Know what you need to do to be ready for launch.","offers":{"@type":"AggregateOffer","highPrice":0,"lowPrice":0,"price":0,"priceCurrency":"NZD","availability":"http://schema.org/InStock","url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon"},"location":{"@type":"Place","name":"Sydney Opera House","geo":{"@type":"GeoCoordinates","latitude":-33.857123,"longitude":151.2149798},"url":"https://websitetestdata.arlo.co/venues/12-sydney-opera-house","address":{"@type":"PostalAddress","streetAddress":"Bennelong Point","addressLocality":"Sydney","postalCode":"2000","addressCountry":"Australia"}},"performer":[{"@type":"Person","name":"Leonard Monaco","url":"https://websitetestdata.arlo.co/presenters/13-leonard-monaco"}]}</script>
+                        <script
+                            type="application/ld+json">{"@context":"http://schema.org","@type":"Course","name":"Plan your next trip to the moon","description":"Get prepare for your exciting next trip to the moon. Know what you need to do to be ready for launch."}</script>
+                    </li>
+                    <li class="arlo-event-listitem" id="view10">
+                        <div class="left" max-width="465px 315px" style="position: relative;">
+                            <div class="date">
+                                Fri, 02 Jun 2023
+                            </div>
+                            <div class="time">
+                                9:00 AM -
+                                9:45 AM
+                            </div>
+                            <div class="location">
+
+                                Sydney
+
+                            </div>
+                            <div class="resize-sensor"
+                                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                <div class="resize-sensor-expand"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 190px; height: 254px;">
+                                    </div>
+                                </div>
+                                <div class="resize-sensor-shrink"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="middle">
+                            <h3>Plan your next trip to the moon</h3>
+                            <div class="summary">
+                                Get prepare for your exciting next trip to the moon. Know what you need to do to be
+                                ready for launch.
+                            </div>
+
+                            <div class="presenters">
+                                <span class="presenterlabel">Presented By </span>
+                                <span class="presenter">
+                                    <a href="#"
+                                        class="arlo-text-color-link">Asher Lopez</a>, <a
+                                        href="#"
+                                        class="arlo-text-color-link">Leonard Monaco</a>, <a
+                                        href="#"
+                                        class="arlo-text-color-link">Diana Quin</a>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="right" style="position: relative;">
+                            <div class="duration">
+                                <span class="label"><i class="fa fa-clock-o" aria-hidden="true"></i></span><span
+                                    class="content">45 minutes</span>
+                            </div>
+                            <div class="offers">
+                                <div class="arlo-offer-container ">Free</div>
+                            </div>
+
+                            <div class="registration">
+                                <a class="arlo-event-register"
+                                    href="#">Register</a>
+                                or <a href="#"
+                                    target="_blank">read more</a>
+
+                            </div>
+                            <div class="resize-sensor"
+                                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                <div class="resize-sensor-expand"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 780px; height: 110px;">
+                                    </div>
+                                </div>
+                                <div class="resize-sensor-shrink"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script
+                            type="application/ld+json">{"@context":"http://schema.org","@type":"Event","name":"Plan your next trip to the moon","startDate":"2023-06-02T09:00:00.0000000+11:00","endDate":"2023-06-02T09:45:00.0000000+11:00","url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon","description":"Get prepare for your exciting next trip to the moon. Know what you need to do to be ready for launch.","offers":{"@type":"AggregateOffer","highPrice":0,"lowPrice":0,"price":0,"priceCurrency":"NZD","availability":"http://schema.org/InStock","url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon"},"location":{"@type":"Place","name":"Sydney Opera House","geo":{"@type":"GeoCoordinates","latitude":-33.857123,"longitude":151.2149798},"url":"https://websitetestdata.arlo.co/venues/12-sydney-opera-house","address":{"@type":"PostalAddress","streetAddress":"Bennelong Point","addressLocality":"Sydney","postalCode":"2000","addressCountry":"Australia"}},"performer":[{"@type":"Person","name":"Asher Lopez","url":"https://websitetestdata.arlo.co/presenters/12-asher-lopez"},{"@type":"Person","name":"Leonard Monaco","url":"https://websitetestdata.arlo.co/presenters/13-leonard-monaco"},{"@type":"Person","name":"Diana Quin","url":"https://websitetestdata.arlo.co/presenters/14-diana-quin"}]}</script>
+                        <script
+                            type="application/ld+json">{"@context":"http://schema.org","@type":"Course","name":"Plan your next trip to the moon","description":"Get prepare for your exciting next trip to the moon. Know what you need to do to be ready for launch."}</script>
+                    </li>
+                    <li class="arlo-event-listitem" id="view10">
+                      <div class="left" max-width="465px 315px" style="position: relative;">
+                          <div class="date">
+                              Mon, 08 May 2023
+                          </div>
+                          <div class="time">
+                              9:00 AM -
+                              10:00 AM
+                          </div>
+                          <div class="location">
+
+                              Viña del Mar
+
+                          </div>
+                          <div class="resize-sensor"
+                              style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                              <div class="resize-sensor-expand"
+                                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                  <div
+                                      style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 190px; height: 254px;">
+                                  </div>
+                              </div>
+                              <div class="resize-sensor-shrink"
+                                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                  <div
+                                      style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="middle">
+                          <h3>Plan your next trip to the moon</h3>
+                          <div class="summary">
+                              Get prepare for your exciting next trip to the moon. Know what you need to do to be
+                              ready for launch.
+                          </div>
+
+                          <div class="presenters">
+                              <span class="presenterlabel">Presented By </span>
+                              <span class="presenter">
+                                  <a href="#"
+                                      class="arlo-text-color-link">Nicolas Caviedes</a>, <a
+                                      href="#"
+                                      class="arlo-text-color-link">Sergio Plaza</a>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="right" style="position: relative;">
+                          <div class="duration">
+                              <span class="label"><i class="fa fa-clock-o" aria-hidden="true"></i></span><span
+                                  class="content">60 minutes</span>
+                          </div>
+                          <div class="offers">
+                              <div class="arlo-offer-container ">Free</div>
+                          </div>
+
+                          <div class="registration">
+                              <a class="arlo-event-register"
+                                  href="#">Register</a>
+                              or <a href="#"
+                                  target="_blank">read more</a>
+
+                          </div>
+                          <div class="resize-sensor"
+                              style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                              <div class="resize-sensor-expand"
+                                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                  <div
+                                      style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 780px; height: 110px;">
+                                  </div>
+                              </div>
+                              <div class="resize-sensor-shrink"
+                                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                  <div
+                                      style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <script
+                          type="application/ld+json">{"@context":"http://schema.org","@type":"Event","name":"Plan your next trip to the moon","startDate":"2023-06-02T09:00:00.0000000+11:00","endDate":"2023-06-02T09:45:00.0000000+11:00","url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon","description":"Get prepare for your exciting next trip to the moon. Know what you need to do to be ready for launch.","offers":{"@type":"AggregateOffer","highPrice":0,"lowPrice":0,"price":0,"priceCurrency":"NZD","availability":"http://schema.org/InStock","url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon"},"location":{"@type":"Place","name":"Sydney Opera House","geo":{"@type":"GeoCoordinates","latitude":-33.857123,"longitude":151.2149798},"url":"https://websitetestdata.arlo.co/venues/12-sydney-opera-house","address":{"@type":"PostalAddress","streetAddress":"Bennelong Point","addressLocality":"Sydney","postalCode":"2000","addressCountry":"Australia"}},"performer":[{"@type":"Person","name":"Asher Lopez","url":"https://websitetestdata.arlo.co/presenters/12-asher-lopez"},{"@type":"Person","name":"Leonard Monaco","url":"https://websitetestdata.arlo.co/presenters/13-leonard-monaco"},{"@type":"Person","name":"Diana Quin","url":"https://websitetestdata.arlo.co/presenters/14-diana-quin"}]}</script>
+                      <script
+                          type="application/ld+json">{"@context":"http://schema.org","@type":"Course","name":"Plan your next trip to the moon","description":"Get prepare for your exciting next trip to the moon. Know what you need to do to be ready for launch."}</script>
+                    </li>
+                    <script
+                        type="application/ld+json">{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon"},{"@type":"ListItem","position":2,"url":"https://websitetestdata.arlo.co/courses/1-plan-your-next-trip-to-the-moon"}]}</script>
+                    <div class="arlo-show-more-container">
+                        <div class="arlo-show-more arlo-bg-color-primary arlo-text-color-contrast"
+                            style="text-align: center;">Show More</div>
+                    </div>
+                </ul>
+            </div>
+            <div class="resize-sensor"
+                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                <div class="resize-sensor-expand"
+                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                    <div
+                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 960px; height: 622px;">
+                    </div>
+                </div>
+                <div class="resize-sensor-shrink"
+                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                    <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+                </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <br>
     </article>
-
   </main>
 
   <footer class="container-fluid footer-section">
@@ -457,7 +651,6 @@
       </div>
     </div>
   </footer>
-
   
   <!-- INI IMPORT JS FILES -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

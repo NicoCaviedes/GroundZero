@@ -1,4 +1,8 @@
 const panels = document.querySelectorAll( '.panel' );
+const btnNavCol = document.getElementById('nav-btn-collapse')
+const delayInMilliseconds = 345;
+var flagBtnNav = false;
+var cartIcon = document.getElementById('cart-icon')
 
 panels.forEach( (panel) => {
 
@@ -14,3 +18,14 @@ function removeActiveClasses(){
         panel.classList.remove('active');
     } )
 }
+
+btnNavCol.addEventListener('click', function() {
+  flagBtnNav = !flagBtnNav;
+  if(flagBtnNav){
+    cartIcon.classList.add("hidden");
+  } else {
+    setTimeout(function() {
+        cartIcon.classList.remove("hidden");
+    }, delayInMilliseconds);
+  }
+})

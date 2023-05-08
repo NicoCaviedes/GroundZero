@@ -1,8 +1,8 @@
 /*=============== CODIGO ===============*/
 
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .footer-section {
@@ -126,6 +126,7 @@ ul {
 .footer-widget ul li a {
   color: #65a37f;
   text-transform: capitalize;
+  padding: 0px 0px 0px 0px !important;
 }
 
 .subscribe-form {
