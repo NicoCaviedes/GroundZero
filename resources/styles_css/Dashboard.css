@@ -1,26 +1,19 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
+/*=============== IMPORTS ===============*/
 
-body{
-    background-color: rgb(203, 241, 219);
-}
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
 
-#sub-bg-page {
-    background-color: rgb(194, 235, 211);
-    width: 75%;
-    height: 100%;
-    margin: auto;
-    border-left: 1px solid rgba(184, 181, 181, 0.267);
-    border-right: 1px solid rgba(184, 181, 181, 0.267);
-    box-shadow: 0px 15px 65px #88888881;
-}
+/*=============== VARIABLES ===============*/
+
+:root {
+    --light-grey: #e2e3e6;
+    --font-lily-scpt: 'Lily Script One';
+} 
+
+/*=============== CODIGO ===============*/
 
 .img-slide{
     margin: auto;
-    width: 99%;
+    width: 100%;
     min-height: 10rem;
     max-height: 25rem;
 }
@@ -35,4 +28,150 @@ body{
     padding: 5px 5px !important;
     min-height: 100px !important;
     max-height: 300px;
+}
+
+/*=============== SECTION CATEGORIAS ===============*/
+
+.container-p {
+    display: flex;
+    width: 70vw;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
+
+/*=============== SECTION ARTISTAS ===============*/
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.flip-card:focus {
+    outline: 0;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-front {
+    background: linear-gradient(to left, #4364f7, #6fb1fc);
+    color: black;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    background: linear-gradient(to right, #4364f7, #6fb1fc);
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+  
+/*=============== AJUSTE PIXELES ===============*/
+
+@media( max-width: 1080px ){
+
+    .panel {
+        height: 55vh;
+    }
+
+}
+
+@media( max-width: 720px ){
+
+    .panel {
+        height: 50vh;
+    }
+
+}
+
+@media( max-width: 540px ){
+
+    .panel {
+        height: 40vh;
+    }
+
+}
+
+@media( max-width: 480px ){
+
+    .container{
+        width: 100vw;
+    }
+
+    .panel {
+        height: 30vh;
+    }
+
+    /* .panel:nth-of-type(7), .panel:nth-of-type(8){
+        display: none;
+        height: 60vh;
+    } */
+
 }
