@@ -1,129 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GroundZero</title>
-    <link rel="stylesheet" href="/resources/styles_css/ContactoEmp.css">
-    <!-- GOOGLE FONTs -->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-     <!-- INI LINKS APP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contacto - GroundZero</title>
+
+  <!-- GOOGLE FONTs -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <!-- INI LINKS APP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
-    <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
-    <!-- END LINKS APP -->
+  <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
+  <link rel="stylesheet" href="/resources/styles_css/StyleBase.css">
+  <link rel="stylesheet" href="/resources/styles_css/Footer.css">
+  <link rel="stylesheet" href="/resources/styles_css/ContactoEmp.css">
 
-    <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero.png">
-
-
+  <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
+  <!-- END LINKS APP -->
 
 
 </head>
-
 <body class="container-fluid">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark row">
-          <a class="navbar-brand" href="#">Ground Zero</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-              <li class="nav-item active">
-                <a class="nav-link" href="/resources/views_html/Dashboard.html">Inicio <span class="sr-only">(current)</span></a>
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5 fixed-top ">
+      <img class="navbar-brand" src="/resources/imgs/logos/circle.svg" alt="Ground Zero">
+      <button id="nav-btn-collapse" class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Proyectos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item disabled" href="#">Ecos del Pincel</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                  Proyectos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Ecos del Pincel</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Esencia Creativa</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Arte en Evolución</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Reflejos Culturales</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Ver todos</a></li>
-                </ul>
+              <li><a class="dropdown-item disabled" href="#">Esencia Creativa</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+              <li><a class="dropdown-item disabled" href="#">Arte en Evolución</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Sedes</a>
+              <li><a class="dropdown-item disabled" href="#">Reflejos Culturales</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link">Contacto</a>
-              </li>
+              <li><a class="dropdown-item disabled" href="#">Ver todos</a></li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Nosotros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Conocenos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sede</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/resources/views_html/ContactoEmp.html">Contacto</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Perfil
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Visualizar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Ver Articulos Propios</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Seguridad</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Productos</a>
+          </li>
+
+          <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="/resources/views_html/LoginAndRegister.html" role="button"
+              aria-pressed="true">Iniciar Sesion</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-success" href="/resources/views_html/ContactoEmp.html" role="button" aria-pressed="true">Cerrar Sesion</a>
+          </li> -->
+        </ul>
+        <form class="d-flex">
+          <input class="form-control mr-2" type="search" placeholder="Escribe Aquí..." aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <span class="navbar-brand position-relative fixed-top ml-4" id="cart-icon">
+        <i class="fa-solid fa-cart-shopping fa-2xl fa-flip-horizontal" style="color: #cbf1db;"></i>
+      </span>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <div class="content">
+        <h1 class="logo">Contacto <span>Empresa</span></h1>
+    
+        <div class="contact-wrapper animated bounceInUp">
+          <div class="contact-form">
+            <h3>INGRESA DATOS</h3>
+            <form action="">
+              <p>
+                <label>Nombre Completo</label>
+                <input type="text" placeholder="Nombre Apellidos" name="fullname">
+              </p>
+              <p>
+                <label>Correo Electronico</label>
+                <input type="email" placeholder="usuario.2023@groundzero.cl" name="email">
+              </p>
+              <p>
+                <label>Telefono Celular</label>
+                <input type="tel" placeholder="+56 9 1122334455" name="phone">
+              </p>
+              <p>
+                <label>Asunto</label>
+                <select name="asunto" id="asunto-form">
+                  <option value="dudasApp">Dudas Aplicación</option>
+                  <option value="problemasVtas">Problema Con Ventas</option>
+                  <option value="otro">Otros</option>
+                </select>
+              </p>
+              <p class="block">
+                <label>Mensaje</label>
+                <textarea name="message" placeholder="Escriba detalladamente acá." rows="3"></textarea>
+              </p>
+              <p class="block">
+                <button>
+                  Enviar
+                </button>
+              </p>
             </form>
           </div>
-        </nav>
-      </header>
-
-
-    <div class="content">
-
-        <h1 class="logo">Contacto <span>Empresa</span></h1>
-
-        <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-form">
-                <h3>INGRESA DATOS</h3>
-                <form action="">
-                    <p>
-                        <label>Nombre Completo</label>
-                        <input type="text" name="fullname">
-                    </p>
-                    <p>
-                        <label>Correo Electronico</label>
-                        <input type="email" name="email">
-                    </p>
-                    <p>
-                        <label>Telefono Celular</label>
-                        <input type="tel" name="phone">
-                    </p>
-                    <p>
-                        <label>Asunto</label>
-                        <input type="text" name="affair">
-                    </p>
-                    <p class="block">
-                       <label>Mensaje</label> 
-                        <textarea name="message" rows="3"></textarea>
-                    </p>
-                    <p class="block">
-                        <button>
-                            Enviar
-                        </button>
-                    </p>
-                </form>
-            </div>
-            <div class="contact-info">
-                <h4 style="text-align:center"> Mas Informacion </h4>
-                <hr>
-                <hr>
-                <br>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt" ></i>  Álvarez 2336, Viña del Mar, Valparaíso</li>
-                    <li><i class="fas fa-phone"></i>(+569) 89671243</li>
-                    <li><i class="fas fa-envelope-open-text"></i> contacto@groundzero.cl</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
-                <p>Company.com</p>
-            </div>
+          <div class="contact-info">
+            <h4 style="text-align:center"> Mas Informacion </h4>
+            <hr>
+            <hr>
+            <br>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> Álvarez 2336, Viña del Mar, Valparaíso</li>
+              <li><i class="fas fa-phone"></i>(+569) 89671243</li>
+              <li><i class="fas fa-envelope-open-text"></i> contacto@groundzero.cl</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus? 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea consequatur. Quibusdam, qui? Culpa voluptatum aliquid officia quibusdam non. Hic pariatur iure unde accusamus necessitatibus provident quo, mollitia natus corrupti!
+            </p>
+          </div>
         </div>
+      </div>
+    </article>
+    <br>
+  </main>
 
+
+
+  <footer class="container-fluid footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Encuentranos en</h4>
+                <span>Álvarez 2336, Viña del Mar, Valparaíso</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Llamanos al</h4>
+                <span>+569 89671243</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Escribenos al</h4>
+                <span>contacto@groundzero.cl</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                elit,Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Siguenos en:</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+              </div>
+            </div>
+          </div>  
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Links de Ayuda</h3>
+              </div>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Articulos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Ultimas Noticias</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Suscribete a nuestras noticias</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>No se pierda ninguna noticia de Ground Zero, por favor ingrese su correo en el formulario de abajo.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Correo Electronico">
+                  <button><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>&copy; 2023 Ground Zero. Todos los derechos reservados.</p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Terminos</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Politica</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INI IMPORT JS FILES -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+  crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
+  <script src="/resources/functions_js/dashboard.js"></script>
+  <!-- END IMPORT JS FILES -->
 
 </body>
 </html>

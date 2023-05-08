@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -9,13 +9,14 @@ body {
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
-}
+} */
 
-.container {
-    max-width: 1170px;
+.content {
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em;
+    width: 100%;
 }
 
 ul {
@@ -67,14 +68,19 @@ ul {
 
 .contact-form form button,
 .contact-form form input,
-.contact-form form textarea {
+.contact-form form textarea,
+.contact-form form select {
     width: 100%;
     padding: .7em;
     border: none;
     background: none;
     outline: 0;
     color: #ffffff;
-    border-bottom: 1px solid #d63031;
+    border-bottom: 1px solid #65a37f;
+}
+
+.contact-form form option {
+    background-color: #3b4046;
 }
 
 .contact-form form button {

@@ -57,10 +57,9 @@ article section{
     /* border: 3px solid #65a37f; */
 }
 
-.tarjeta > p,a {
+.tarjeta > p{
     font-size: 20px;
     padding-left: 35px;
-    justify-content: center;
 }
 
 .tarjeta-sesion {
@@ -180,8 +179,6 @@ article section{
 }
 
 .panel > h3 > a:hover {
-    /* background-color: #cbf1db36; */
-    border-radius: 10px;
     padding: 10px;
     color: #7bc098;
     font-size: xx-large;
