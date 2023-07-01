@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Usuario
 
 def index(request):
+    listAristas = Usuario.objects.f
     context = {}
     return render(request, 'dashboard.html') 
 
