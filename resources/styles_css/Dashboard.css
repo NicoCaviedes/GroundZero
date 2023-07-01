@@ -7,6 +7,8 @@
 :root {
     --light-grey: #e2e3e6;
     --font-lily-scpt: 'Lily Script One';
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
 } 
 
 /*=============== CODIGO ===============*/
@@ -81,6 +83,45 @@ article section{
     background-color: darkgrey;
     outline: 1px solid slategrey;
 }
+
+
+
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    height: 1.5em;
+    opacity: 0.75;
+}
+.hr-text:before {
+    content: '';
+    /* background: linear-gradient(to right, transparent, #818078, transparent); */
+    background: linear-gradient(to right, transparent, #65a37f, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 5px;
+}
+.hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5em;
+    line-height: 1.6em;
+    /* color: #818078; */
+    color: #65a37f;
+    background-color: #eeeff7;
+}
+
+
+
+
 
 /*=============== SECTION NOTICIAS ===============*/
 
