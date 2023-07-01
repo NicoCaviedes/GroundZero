@@ -33,11 +33,10 @@
         <article class="container-fluid">
 
             <hr class="hr-text" data-content="Productos Disponibles">
-            <h1>Hola <i class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></h1>
             <div class="shell">
                 <div class="container">
                     <div class="row">
-                        {% for product in listProduct %}
+                        <!-- {% for product in listProduct %} -->
                             <div class="col-md-3">
                                 <div class="wsk-cp-product">
                                     <div class="wsk-cp-img">
@@ -46,21 +45,25 @@
                                     </div>
                                     <div class="wsk-cp-text">
                                         <div class="category">
-                                            <span>{{product.getNombreCateg}}</span>
+                                            <!-- <span>{{product.getNombreCateg}}</span> -->
+                                            <span>Categoria producto</span>
                                         </div>
                                         <div class="title-product">
-                                            <h3> {{product.nombre}} </h3>
+                                            <!-- <h3> {{product.nombre}} </h3> -->
+                                            <h3> Nombre Producto</h3>
                                         </div>
                                         <div class="card-footer">
-                                            <div class="wcf-left"><span class="price">{{product.precio}}</span></div>
-                                            <div class="wcf-right"><a href="#" class="buy-btn" onclick="agregarCompra()" data-name="{{producto}}"><i
+                                            <!-- <div class="wcf-left"><span class="price">{{product.precio}}</span></div> -->
+                                            <div class="wcf-left"><span class="price">Precio producto</span></div>
+                                            <!-- <div class="wcf-right"><a href="#" class="buy-btn" onclick="agregarCompra()" data-name="{{producto}}"><i -->
+                                            <div class="wcf-right"><a href="#" class="buy-btn" onclick="agregarCompra()"><i
                                                         class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        {% endfor %}
-                        <!-- <div class="col-md-3">
+                        <!-- {% endfor %} -->
+                        <div class="col-md-3">
                             <div class="wsk-cp-product">
                                 <div class="wsk-cp-img"><img
                                         src="https://1.bp.blogspot.com/-b-2SgNUrFHg/WVSvmewWqgI/AAAAAAAAAK0/1K4YCcbYjhokHwV_IgiVJN9mEnQoWunIwCPcBGAYYCw/s1600/fashion-portrait-nicole-6347.jpg"
@@ -131,10 +134,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         
                     </div>
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="wsk-cp-product">
                                 <div class="wsk-cp-img">
@@ -232,7 +235,7 @@
                                 </div>
                             </div>
                         </div> 
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </article>

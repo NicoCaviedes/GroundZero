@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url('/resources/imgs/backgrounds/bg.jpg');
+  background-image: url('/static/img/backgrounds/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 	display: flex;

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="/resources/styles_css/LogAndReg.css" />
+    <link rel="stylesheet" href="{% static 'css/LogAndReg.css' %}" />
     
-    <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
+    <link rel="icon" type="image/x-icon" href="{% static '/img/logos/GroundZero_Isotipo.png' %}">
     <!-- END LINKS APP -->
 
 </head>
@@ -79,7 +80,7 @@
     crossorigin="anonymous"></script>
 
     <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
-    <script src="/resources/functions_js/logAndReg.js"></script>
+    <script src="{% static 'js/logAndReg.js' %}"></script>
     <!-- END IMPORT JS FILES -->
 </body>
 </html>

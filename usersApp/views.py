@@ -29,3 +29,7 @@ def producPage(request):
         'productList': productList,
     }
     return render(request,'productDash.html')
+
+def sessionPage(request):
+    context = {}
+    return render(request,'sessionPage.html')
