@@ -1,0 +1,95 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5 fixed-top ">
+    <img class="navbar-brand" src="{% static '/img/logos/circle.svg' %}" alt="Ground Zero">
+    <button id="nav-btn-collapse" class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'dashboard' %}">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Proyectos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item disabled" href="#">Ecos del Pincel</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Esencia Creativa</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Arte en Evolución</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Reflejos Culturales</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Ver todos</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Nosotros
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Conocenos</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sede</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'contact' %}">Contacto</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Perfil
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Visualizar</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Modificar</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Ver Articulos Propios</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Seguridad</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Productos</a>
+            </li>
+
+            <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
+            <li class="nav-item">
+                <a class="nav-link text-warning" href="/resources/views_html/LoginAndRegister.html" role="button"
+                    aria-pressed="true">Iniciar Sesion</a>
+            </li>
+            <!-- <li class="nav-item">
+          <a class="nav-link text-success" href="/resources/views_html/ContactoEmp.html" role="button" aria-pressed="true">Cerrar Sesion</a>
+        </li> -->
+        </ul>
+        <form class="d-flex">
+            <input class="form-control mr-2" type="search" placeholder="Escribe Aquí..." aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <button type="button" class="navbar-brand position-relative fixed-top ml-4 text-decoration-none bg-transparent border-0 shadow-none" data-toggle="modal" data-target="#cartModal" id="cart-icon" style="background-color: #257bd1;">
+        <i class="fa-solid fa-cart-shopping fa-2xl fa-flip-horizontal" style="color: #cbf1db;"></i>
+    </button>
+</nav>

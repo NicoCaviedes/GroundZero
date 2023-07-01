@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,113 +19,22 @@
   integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
-  <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
-  <link rel="stylesheet" href="/resources/styles_css/StyleBase.css">
-  <link rel="stylesheet" href="/resources/styles_css/Footer.css">
-  <link rel="stylesheet" href="/resources/styles_css/ContactoEmp.css">
+  <link rel="stylesheet" href="{% static '/css/ContactoEmp.css' %}">
+  <link rel="stylesheet" href="{% static '/css/Dashboard.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/StyleBase.css' %}">
+  <link rel="stylesheet" href="{% static '/css/Footer.css' %}">
 
-  <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
+  <link rel="icon" type="image/x-icon" href="{% static 'img/logos/GroundZero_Isotipo.png' %}">
   <!-- END LINKS APP -->
 
 
 </head>
 <body class="container-fluid">
-  <header class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark row pl-5 pr-5 fixed-top ">
-      <img class="navbar-brand" src="/resources/imgs/logos/circle.svg" alt="Ground Zero">
-      <button id="nav-btn-collapse" class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Proyectos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item disabled" href="#">Ecos del Pincel</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item disabled" href="#">Esencia Creativa</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item disabled" href="#">Arte en Evolución</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item disabled" href="#">Reflejos Culturales</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item disabled" href="#">Ver todos</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Nosotros
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Conocenos</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Sede</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="/resources/views_html/ContactoEmp.html">Contacto</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Perfil
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Visualizar</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Modificar</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Ver Articulos Propios</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Seguridad</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
-          </li>
 
-          <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
-          <li class="nav-item">
-            <a class="nav-link text-warning" href="/resources/views_html/LoginAndRegister.html" role="button"
-              aria-pressed="true">Iniciar Sesion</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link text-success" href="/resources/views_html/ContactoEmp.html" role="button" aria-pressed="true">Cerrar Sesion</a>
-          </li> -->
-        </ul>
-        <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Escribe Aquí..." aria-label="Search">
-          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-      </div>
-
-      <span class="navbar-brand position-relative fixed-top ml-4" id="cart-icon">
-        <i class="fa-solid fa-cart-shopping fa-2xl fa-flip-horizontal" style="color: #cbf1db;"></i>
-      </span>
-    </nav>
-  </header>
+  <!-- MODAL CARRITO COMPRA -->
+  {% include 'fragments/modalCarrito.html' %}
+  <!-- NAV HTML FRAGMENT -->
+  {% include 'fragments/navBar.html' %}
 
   <main>
     <article>
