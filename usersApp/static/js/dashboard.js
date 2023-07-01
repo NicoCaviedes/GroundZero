@@ -20,6 +20,7 @@ function removeActiveClasses(){
 }
 
 btnNavCol.addEventListener('click', function() {
+  console.log("Hola mundo")
   flagBtnNav = !flagBtnNav;
   if(flagBtnNav){
     cartIcon.classList.add("hidden");

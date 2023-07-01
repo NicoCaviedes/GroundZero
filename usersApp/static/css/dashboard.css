@@ -173,22 +173,22 @@ article section{
 }
 
 .panel:nth-child(1) {
-    background-image: url('/resources/imgs/categorias/PresetCateg.avif');
+    background-image: url('/static/img/categorias/PresetCateg.avif');
 }
 .panel:nth-child(2) {
-    background-image: url('/resources/imgs/categorias/PinturaCateg.avif');
+    background-image: url('/static/img/categorias/PinturaCateg.avif');
 }
 .panel:nth-child(3) {
-    background-image: url('/resources/imgs/categorias/OrfebreriaCateg.avif');
+    background-image: url('/static/img/categorias/OrfebreriaCateg.avif');
 }
 .panel:nth-child(4) {
-    background-image: url('/resources/imgs/categorias/TejidoArtisticoCateg.avif');
+    background-image: url('/static/img/categorias/TejidoArtisticoCateg.avif');
 }
 .panel:nth-child(5) {
-    background-image: url('/resources/imgs/categorias/EsculturaCateg.avif');
+    background-image: url("/static/img/categorias/EsculturaCateg.avif");
 }
 .panel:nth-child(6) {
-    background-image: url('/resources/imgs/categorias/FotografiaCateg.avif');
+    background-image: url('/static/img/categorias/FotografiaCateg.avif');
 }
 
 .panel::after {
@@ -333,22 +333,22 @@ article section{
 }
 
 .card-profile:nth-child(1):before {
-    background-image: url('/resources/imgs/artistas/BrieLarson.jpg');
+    background-image: url('/static/img/artistas/BrieLarson.jpg');
 }
 .card-profile:nth-child(2):before {
-    background-image: url('/resources/imgs/artistas/ChrisEvans.jpg');
+    background-image: url('/static/img/artistas/ChrisEvans.jpg');
 }
 .card-profile:nth-child(3):before {
-    background-image: url('/resources/imgs/artistas/ChrisPratt.jpg');
+    background-image: url('/static/img/artistas/ChrisPratt.jpg');
 }
 .card-profile:nth-child(4):before {
-    background-image: url('/resources/imgs/artistas/ElizabethOlsen.jpg');
+    background-image: url('/static/img/artistas/ElizabethOlsen.jpg');
 }
 .card-profile:nth-child(5):before {
-    background-image: url('/resources/imgs/artistas/RobertDowney.jpg');
+    background-image: url('/static/img/artistas/RobertDowney.jpg');
 }
 .card-profile:nth-child(6):before {
-    background-image: url('/resources/imgs/artistas/ScarlettJohansson.jpg');
+    background-image: url('/static/img/artistas/ScarlettJohansson.jpg');
     filter: blur(6px);
     -webkit-filter: blur(6px);
 }
