@@ -29,3 +29,7 @@ btnNavCol.addEventListener('click', function() {
     }, delayInMilliseconds);
   }
 })
+
+$(document).ready(function() {  
+  $('#cartModal').modal('show');
+});
