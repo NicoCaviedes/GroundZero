@@ -36,6 +36,10 @@ class Usuario(models.Model):
     def __str__(self):
         return str(self.nombre)+" "+str(self.ape_paterno)
     
+    @property
+    def getProfesionName(self):
+        return self.id_prof.nombre
+    
 class InfoEmpresa(models.Model):
     id_inf_emp  = models.AutoField(primary_key=True)
     rut         = models.CharField(max_length=12, null=False)

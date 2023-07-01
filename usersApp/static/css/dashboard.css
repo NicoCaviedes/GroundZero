@@ -332,7 +332,7 @@ article section{
     outline-offset: 3px;
 }
 
-.card-profile:nth-child(1):before {
+/* .card-profile:nth-child(1):before {
     background-image: url('/static/img/artistas/BrieLarson.jpg');
 }
 .card-profile:nth-child(2):before {
@@ -346,12 +346,12 @@ article section{
 }
 .card-profile:nth-child(5):before {
     background-image: url('/static/img/artistas/RobertDowney.jpg');
-}
-.card-profile:nth-child(6):before {
+} */
+/* .card-profile:nth-last-child():before {
     background-image: url('/static/img/artistas/ScarlettJohansson.jpg');
     filter: blur(6px);
     -webkit-filter: blur(6px);
-}
+} */
 
 /*=============== AJUSTE PIXELES ===============*/
 

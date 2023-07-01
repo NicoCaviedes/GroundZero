@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -134,16 +135,36 @@
         <h1>Artistas</h1>
         <p>Los mejores artistas calificados por la comunidad, a continuacion puede revisar y consultar por cada perfil</p>
         <section class="row row-cols-3 justify-content-around">
-          
-          <div class="col card-profile">
-            <div class="content-prof">
-              <h2 class="title-prof">Brie Larson</h2>
-              <p class="copy-prof">Calificacion: <span>★★★★★</span></p>
-              <p class="copy-prof">Profesion: Escultora</p>
-              <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
-            </div>
-          </div>
-          <div class="col card-profile">
+          {% for artista in listArtists %}
+            {% if forloop.counter < 6 %}
+              <div class="col card-profile" style="background-image: url('{{artista.img_perfil.url}}');">
+                <div class="content-prof">
+                  <h2 class="title-prof">{{artista.nombre}} {{artista.ape_paterno}}</h2>
+                  <p class="copy-prof">Calificacion: 
+                    <span>
+                      {% for i in "*****" %}
+                        {% if forloop.counter <= artista.calificacion %}
+                            <span class="star">&#9733;</span>
+                        {% else %}
+                          <span class="empty-star">&#9734;</span>
+                        {% endif %}
+                      {% endfor %}
+                    </span>
+                  </p>
+                  <p class="copy-prof">Profesion: {{artista.getProfesionName}}</p>
+                  <a href="{% url 'viewProfile' artista.id_usuario %}" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
+                </div>
+              </div>
+            {% else %}
+              <div class="col card-profile" style="filter: blur(6px);-webkit-filter: blur(6px);">
+                <div class="content-prof">
+                  <h2 class="title-prof">Ver más perfiles</h2>
+                  <a href="{% url 'allProfiles' %}" class="btn btn-outline-light" role="button" aria-pressed="true">Visualizar</a>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          <!-- <div class="col card-profile">
             <div class="content-prof">
               <h2 class="title-prof">Chris Evans</h2>
               <p class="copy-prof">Calificacion: <span>★★★★★</span></p>
@@ -174,13 +195,8 @@
               <p class="copy-prof">Profesion: Pintor</p>
               <a href="/resources/views_html/PerfilUsuario.html" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
             </div>
-          </div>
-          <div class="col card-profile">
-            <div class="content-prof">
-              <h2 class="title-prof">Ver más perfiles</h2>
-              <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true">Visualizar</a>
-            </div>
-          </div>
+          </div> -->
+          
         </section>
       </div>
 
