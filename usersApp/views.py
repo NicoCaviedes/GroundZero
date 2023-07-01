@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Usuario
+from .models import Usuario,Producto
 
 def index(request):
     listAristas = Usuario.objects.exclude(id_prof = None)[:6]
@@ -22,3 +22,10 @@ def verPerfil(request, id_usuario):
         'user':usuario
     }
     return render(request, 'perfilUsuario.html',context)
+
+def producPage(request):
+    productList = Producto.objects.all()
+    context = {
+        'productList': productList,
+    }
+    return render(request,'productDash.html')

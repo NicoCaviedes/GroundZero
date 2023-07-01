@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <!-- INI LINKS APP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/styleBase.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/productDash.css' %}">
+
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logos/GroundZero_Isotipo.png' %}">
+    <!-- END LINKS APP -->
+
+</head>
+
+<body class="container-fluid">
+
+    <!-- MODAL CARRITO COMPRA -->
+    {% include 'fragments/modalCarrito.html' %}
+    <!-- NAV HTML FRAGMENT -->
+    {% include 'fragments/navBar.html' %}
+
+    <main>
+        <article class="container-fluid">
+
+            <hr class="hr-text" data-content="Productos Disponibles">
+            <h1>Hola <i class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></h1>
+            <div class="shell">
+                <div class="container">
+                    <div class="row">
+                        {% for product in listProduct %}
+                            <div class="col-md-3">
+                                <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img">
+                                        <img src="https://3.bp.blogspot.com/-eDeTttUjHxI/WVSvmI-552I/AAAAAAAAAKw/0T3LN6jABKMyEkTRUUQMFxpe6PLvtcMMwCPcBGAYYCw/s1600/001-culture-clash-matthew-gianoulis.jpg"
+                                            alt="Product" class="img-responsive" />
+                                    </div>
+                                    <div class="wsk-cp-text">
+                                        <div class="category">
+                                            <span>{{product.getNombreCateg}}</span>
+                                        </div>
+                                        <div class="title-product">
+                                            <h3> {{product.nombre}} </h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="wcf-left"><span class="price">{{product.precio}}</span></div>
+                                            <div class="wcf-right"><a href="#" class="buy-btn" onclick="agregarCompra()" data-name="{{producto}}"><i
+                                                        class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!-- <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                        src="https://1.bp.blogspot.com/-b-2SgNUrFHg/WVSvmewWqgI/AAAAAAAAAK0/1K4YCcbYjhokHwV_IgiVJN9mEnQoWunIwCPcBGAYYCw/s1600/fashion-portrait-nicole-6347.jpg"
+                                        alt="Product" class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Introvert</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                        src="https://1.bp.blogspot.com/-XL_Ba-178Fo/WVSvm5AbApI/AAAAAAAAAK4/X5109HTqUiAhPjbmz4NFVHcpL7ZWe6T3ACPcBGAYYCw/s1600/wow-29.jpg"
+                                        alt="Product" class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Beauty</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                        src="https://3.bp.blogspot.com/-iUes8qr4uC8/WVSvl6Wf_fI/AAAAAAAAAKs/JiTUUVvdbqEC_QGGaQhuVJiezIN3LIqEgCPcBGAYYCw/s1600/IMG_5367-bp.jpg"
+                                        alt="Product" class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Drama</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart cvf ggf gfg g</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-md-6">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img">
+                                    <img src="https://3.bp.blogspot.com/-eDeTttUjHxI/WVSvmI-552I/AAAAAAAAAKw/0T3LN6jABKMyEkTRUUQMFxpe6PLvtcMMwCPcBGAYYCw/s1600/001-culture-clash-matthew-gianoulis.jpg"
+                                        alt="Product" class="img-responsive" />
+                                </div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Ethnic</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                        src="https://1.bp.blogspot.com/-b-2SgNUrFHg/WVSvmewWqgI/AAAAAAAAAK0/1K4YCcbYjhokHwV_IgiVJN9mEnQoWunIwCPcBGAYYCw/s1600/fashion-portrait-nicole-6347.jpg"
+                                        alt="Product" class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Introvert</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                        src="https://1.bp.blogspot.com/-XL_Ba-178Fo/WVSvm5AbApI/AAAAAAAAAK4/X5109HTqUiAhPjbmz4NFVHcpL7ZWe6T3ACPcBGAYYCw/s1600/wow-29.jpg"
+                                        alt="Product" class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Beauty</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                        src="https://3.bp.blogspot.com/-iUes8qr4uC8/WVSvl6Wf_fI/AAAAAAAAAKs/JiTUUVvdbqEC_QGGaQhuVJiezIN3LIqEgCPcBGAYYCw/s1600/IMG_5367-bp.jpg"
+                                        alt="Product" class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Drama</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>My face not my heart cvf ggf gfg g</h3>
+                                    </div>
+                                    <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px in
+                                            html5 player. player good work now check this link</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                    class="fa-sharp fa-solid fa-cart-plus fa-flip-horizontal"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>-->
+                </div>
+            </div>
+        </article>
+    </main>
+
+    {% include 'fragments/footer.html' %}
+
+    <!-- INI IMPORT JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
+    <!-- <script src="/resources/js/dashboard.js"></script> -->
+    <script src="{% static '/js/dashboard.js' %}"></script>
+    <!-- END IMPORT JS FILES -->
+
+</body>
+
+</html>
