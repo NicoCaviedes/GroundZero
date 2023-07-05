@@ -173,22 +173,22 @@ article section{
 }
 
 .panel:nth-child(1) {
-    background-image: url('/static/img/categorias/PresetCateg.avif');
+    background-image: url('/media/categorias/PresetCateg.avif');
 }
 .panel:nth-child(2) {
-    background-image: url('/static/img/categorias/PinturaCateg.avif');
+    background-image: url('/media/categorias/PinturaCateg.avif');
 }
 .panel:nth-child(3) {
-    background-image: url('/static/img/categorias/OrfebreriaCateg.avif');
+    background-image: url('/media/categorias/OrfebreriaCateg.avif');
 }
 .panel:nth-child(4) {
-    background-image: url('/static/img/categorias/TejidoArtisticoCateg.avif');
+    background-image: url('/media/categorias/TejidoArtisticoCateg.avif');
 }
 .panel:nth-child(5) {
-    background-image: url("/static/img/categorias/EsculturaCateg.avif");
+    background-image: url("/media/categorias/EsculturaCateg.avif");
 }
 .panel:nth-child(6) {
-    background-image: url('/static/img/categorias/FotografiaCateg.avif');
+    background-image: url('/media/categorias/FotografiaCateg.avif');
 }
 
 .panel::after {
