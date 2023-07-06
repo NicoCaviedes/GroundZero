@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,36 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil - GroundZero</title>
 
-  <!-- INI LINKS APP -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
   <!-- Inicio STYLE body-->
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-  <link rel="stylesheet"
-    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
-  <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
+  <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css"> -->
 
   <!-- ANIMATE CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
   <!-- INI LINKS APP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
   integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
-  <link rel="stylesheet" href="/resources/styles_css/Dashboard.css" />
-  <link rel="stylesheet" href="/resources/styles_css/StyleBase.css">
-  <link rel="stylesheet" href="/resources/styles_css/Footer.css">
-  <link rel="stylesheet" href="/resources/styles_css/PerfilUsuario.css">
+  <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/styleBase.css' %}">
+  <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+  <link rel="stylesheet" href="{% static '/css/userProfile.css' %}">
 
-  <link rel="icon" type="image/x-icon" href="/resources/imgs/logos/GroundZero_Isotipo.png">
+  <link rel="icon" type="image/x-icon" href="{{MEDIA_URL}}logos/GroundZero_Isotipo.png">
   <!-- CIERRE STYLE body-->
 
 </head>
@@ -58,7 +48,7 @@
             <div class="col-md-6 ml-auto mr-auto">
               <div class="profile">
                 <div class="avatar">
-                  <img src="/resources/imgs/artistas/RobertDowney.jpg">
+                  <img src="{{MEDIA_URL}}artistas/RobertDowney.jpg">
                 </div>
                 <div class="name">
                   <h3 class="title">Robert Downey Jr.</h3>
@@ -87,8 +77,8 @@
 
                 <div class="row">
                   <div class="col-md-3 ml-auto">
-                    <img src="/resources/imgs/categorias/pintura/obr_00000000_1.jpg" class="rounded img-fluid">
-                    <img src="/resources/imgs/categorias/pintura/obr_00000000_2.jpg" class="rounded img-fluid">
+                    <img src="{{MEDIA_URL}}categorias/pintura/obr_00000000_1.jpg" class="rounded img-fluid">
+                    <img src="{{MEDIA_URL}}categorias/pintura/obr_00000000_2.jpg" class="rounded img-fluid">
                   </div>
                   <div class="col-md-3 mr-auto">
                     <!-- <img src="https://images.unsplash.com/photo-1521341057461-6eb5f40b07ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=72da2f550f8cbd0ec252ad6fb89c96b2&auto=format&fit=crop&w=334&q=80" class="rounded"> -->
@@ -215,113 +205,7 @@
       </div>
   </main> <!-- FINAL MAIL  -->
 
-  <footer class="container-fluid footer-section">
-    <div class="container">
-      <div class="footer-cta pt-5 pb-5">
-        <div class="row">
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="fas fa-map-marker-alt"></i>
-              <div class="cta-text">
-                <h4>Encuentranos en</h4>
-                <span>Álvarez 2336, Viña del Mar, Valparaíso</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="fas fa-phone"></i>
-              <div class="cta-text">
-                <h4>Llamanos al</h4>
-                <span>+569 89671243</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="far fa-envelope-open"></i>
-              <div class="cta-text">
-                <h4>Escribenos al</h4>
-                <span>contacto@groundzero.cl</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-content pt-5 pb-5">
-        <div class="row">
-          <div class="col-xl-4 col-lg-4 mb-50">
-            <div class="footer-widget">
-              <div class="footer-text">
-                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec
-                  tetur adipisicing
-                  elit,Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="footer-social-icon">
-                <span>Siguenos en:</span>
-                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-            <div class="footer-widget">
-              <div class="footer-widget-heading">
-                <h3>Links de Ayuda</h3>
-              </div>
-              <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Articulos</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Contactanos</a></li>
-                <li><a href="#">Ultimas Noticias</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-            <div class="footer-widget">
-              <div class="footer-widget-heading">
-                <h3>Suscribete a nuestras noticias</h3>
-              </div>
-              <div class="footer-text mb-25">
-                <p>No se pierda ninguna noticia de Ground Zero, por favor ingrese su correo en el formulario de abajo.
-                </p>
-              </div>
-              <div class="subscribe-form">
-                <form action="#">
-                  <input type="text" placeholder="Correo Electronico">
-                  <button><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-            <div class="copyright-text">
-              <p>&copy; 2023 Ground Zero. Todos los derechos reservados.</p>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Terminos</a></li>
-                <li><a href="#">Privacidad</a></li>
-                <li><a href="#">Politica</a></li>
-                <li><a href="#">Contacto</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  {% include 'fragments/footer.html' %}
 
   <!-- INI IMPORT JS FILES -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -333,10 +217,11 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 
   <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
-  <script src="/resources/functions_js/funDashboard.js"></script>
+  
+  <script src="{% static '/js/funDashboard.js' %}"></script>
+  <script src="{% static '/js/funPerUsuario.js' %}"></script>
   <!-- END IMPORT JS FILES -->
 
-  <script src="/resources/functions_js/funPerUsuario.js"></script>
 
 </body>
 </html>
