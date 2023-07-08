@@ -35,7 +35,7 @@
                     {% if listProds != None %}
                         {% for producto in listProds %}
                             <div class="card">
-                                <img src="{{MEDIA_ROOT}}/productos/producto_{{producto.id_prod}}.png" class="card-img-top" alt="Producto">
+                                <img src="{{producto.img_producto.url}}" class="card-img-top" alt="Producto">
                                 <div class="card-body">
                                     <h5 class="card-title">{{producto.nombre}}</h5>
                                     <p class="card-text">Precio: {{producto.precio}}</p>

@@ -1,7 +1,4 @@
 from django.db import models
-# from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
-User=get_user_model()
 
 def upload_location(instance, filename):
     filebase, extension = filename.split('.')
@@ -23,7 +20,7 @@ class Profesiones(models.Model):
         return str(self.nombre)
 
 class Usuario(models.Model):
-    id_usuario      = models.IntegerField(primary_key=True, default=0)
+    id_usuario      = models.AutoField(primary_key=True, default=0)
     rut             = models.CharField(max_length=12, null=True)
     nombre          = models.CharField(max_length=20, blank=False, null=False)
     ape_paterno     = models.CharField(max_length=20, blank=False, null=False)
@@ -35,7 +32,6 @@ class Usuario(models.Model):
     img_perfil      = models.ImageField(upload_to=upload_location, null=True)
     calificacion    = models.IntegerField(null=True, default=0)
     id_prof         = models.ForeignKey(Profesiones, on_delete=models.CASCADE, db_column='id_prof')
-    user            = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.nombre)+" "+str(self.ape_paterno)
@@ -50,14 +46,14 @@ class InfoEmpresa(models.Model):
     nombreRubro = models.CharField(max_length=30, blank=False, null=False)
 
 class CategoriaProducto(models.Model):
-    id_categ_prod   = models.AutoField(primary_key=True)
+    id_categ_prod   = models.IntegerField(primary_key=True)
     nombre          = models.CharField(max_length=20, blank=False, null=False)
 
     def __str__(self):
         return str(self.nombre)
 
 class Producto(models.Model):
-    id_prod         = models.IntegerField(primary_key=True, default=0)
+    id_prod         = models.AutoField(primary_key=True, default=0)
     nombre          = models.CharField(max_length=20, blank=False, null=False)
     precio          = models.IntegerField(null=False, default=0)
     stock           = models.PositiveIntegerField(null=False, default=0)
@@ -80,7 +76,7 @@ class SesionesEmpleados(models.Model):
     id_sesion_emp   = models.AutoField(primary_key=True)
 
 class CompraUsuario(models.Model):
-    id_compra_user  = models.IntegerField(primary_key=True, default=0)
+    id_compra_user  = models.AutoField(primary_key=True, default=0)
     total_compra    = models.IntegerField(null=False, default=0)
     cont_prods      = models.IntegerField(null=False, default=0)
     id_user         = models.ForeignKey(Usuario, on_delete=models.CASCADE, db_column='id_usuario')

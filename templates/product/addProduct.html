@@ -53,7 +53,6 @@
                                 </div>
                                 <label class="my-1 mr-2" for="categProd">Categoria Producto</label>
                                 <select class="custom-select my-1 mr-sm-2" name="idCategProd" id="categProd">
-                                    <option value="0" selected>Categorias</option>
                                     {% for categ in listCategs %}
                                         <option value="{{categ.id_categ_prod}}">{{categ.nombre}}</option>
                                     {% endfor %}

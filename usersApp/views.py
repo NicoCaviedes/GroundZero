@@ -1,3 +1,4 @@
+from numbers import Integral
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User, Group
@@ -50,11 +51,13 @@ def verPerfil(request, id_usuario):
 
 def productPage(request, categ):
     categ = CategoriaProducto.objects.get(nombre = categ)
-
+    print(categ)
+    print(categ.id_categ_prod)
     try:
-        listProds = Producto.objects.get(id_categ_prod = categ.id_categ_prod)
-    except Exception:
+        listProds = Producto.objects.filter(id_categ_prod = categ)
+    except Exception as e:
         print("error en query no existe registros")
+        print(e)
         listProds = None
 
     listCategs = CategoriaProducto.objects.all()
@@ -81,28 +84,32 @@ def regProduct(request):
         nombreProd = request.POST['nombre']
         precioProd = request.POST['precio']
         stockProd = request.POST['stock']
-        imgProd = request.POST['idCategProd']
-        idCategProd = request.POST['imgPicker']
-        idUser = curUser.id_usuario
+        categProd = CategoriaProducto.objects.get(id_categ_prod = request.POST['idCategProd'])
+        imgProd = request.POST['imgPicker']
+        userDetail = Usuario.objects.get(email = curUser.email)
 
         newProduct = Producto.objects.create(
             nombre = nombreProd,
             precio = precioProd,
             stock = stockProd,
+            id_categ_prod = categProd,
             img_producto = imgProd,
-            id_categ_prod = idCategProd,
-            id_usuario = idUser
+            id_usuario = userDetail
         )
 
         if validacionesProd(newProduct):
             newProduct.save()
-            context += {
+            context = {
+                'listCategs' : listCategs,
+                'userSession' : curUser,
                 'msgResultadoInsert':'Se ha ingresado correctamente!'
             }
             return render(request, 'product/addProduct.html',context)    
         else:
-            context += {
-                'msgResultadoInsert' : 'No se ha podido ingresar correctamente'
+            context = {
+                'listCategs' : listCategs,
+                'userSession' : curUser,
+                'msgResultadoInsert':'Se ha ingresado correctamente!'
             }
             return render(request, 'product/addProduct.html',context)
     else:
