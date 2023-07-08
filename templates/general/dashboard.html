@@ -13,7 +13,7 @@
   integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
-  <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
   <link rel="stylesheet" href="{% static '/css/styleBase.css' %}">
   <link rel="stylesheet" href="{% static '/css/footer.css' %}">
   <link rel="stylesheet" href="{% static '/css/event.css' %}">
@@ -23,7 +23,7 @@
 
 </head>
 <body class="container-fluid">
-
+  
   <!-- MODAL CARRITO COMPRA -->
   {% include 'fragments/modalCarrito.html' %}
   <!-- NAV HTML FRAGMENT -->
@@ -164,43 +164,10 @@
               </div>
             {% endif %}
           {% endfor %}
-          <!-- <div class="col card-profile">
-            <div class="content-prof">
-              <h2 class="title-prof">Chris Evans</h2>
-              <p class="copy-prof">Calificacion: <span>★★★★★</span></p>
-              <p class="copy-prof">Profesion: Orfrebrero</p>
-              <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
-            </div>
-          </div>
-          <div class="col card-profile">
-            <div class="content-prof">
-              <h2 class="title-prof">Chris Pratt</h2>
-              <p class="copy-prof">Calificacion: <span>★★★★☆</span></p>
-              <p class="copy-prof">Profesion: Fotografo</p>
-              <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
-            </div>
-          </div>
-          <div class="col card-profile">
-            <div class="content-prof">
-              <h2 class="title-prof">Elizabeth Olsen</h2>
-              <p class="copy-prof">Calificacion: <span>★★★★☆</span></p>
-              <p class="copy-prof">Profesion: Fotografa</p>
-              <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
-            </div>
-          </div>
-          <div class="col card-profile">
-            <div class="content-prof">
-              <h2 class="title-prof">Robert Downey</h2>
-              <p class="copy-prof">Calificacion: <span>★★★★☆</span></p>
-              <p class="copy-prof">Profesion: Pintor</p>
-              <a href="/resources/views_html/PerfilUsuario.html" class="btn btn-outline-light" role="button" aria-pressed="true">Ver Perfil</a>
-            </div>
-          </div> -->
-          
         </section>
       </div>
 
-      <div class="tarjeta">
+      <div class="tarjeta p-3">
         <h1>Proximas Sesiones</h1>
         <section class="row justify-content-center tarjeta-sesion">
           <div class="arlo arlo-loaded" max-width="1000px" style="position: relative;">
@@ -480,7 +447,7 @@
     </article>
   </main>
 
-  {%include 'fragments/footer.html' %}
+  {% include 'fragments/footer.html' %}
   
   <!-- INI IMPORT JS FILES -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

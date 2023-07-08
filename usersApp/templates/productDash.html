@@ -49,27 +49,69 @@
                           <small class="text-muted">Last updated 3 mins ago</small>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                          <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                          <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
                 </section>
+                
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button>
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Carrito de compra
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form action="" method="post">
+                      <div class="modal-body">
+                        <table class="table table-image">
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Producto</th>
+                              <th scope="col">Precio</th>
+                              <th scope="col">Cantidad</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">Accion</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="w-25">
+                                <!--<img src="./img/vans.png" class="img-fluid img-thumbnail" alt="Sheep"> -->
+                                <img src="{{MEDIA_URL}}categorias/pintura/obr_00000000_4.jpg" class="img-fluid img-thumbnail"
+                                  alt="Pintura1">
+                              </td>
+                              <td>Pintura 01 - Briat Larson</td>
+                              <td>89$</td>
+                              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+                              <td>178$</td>
+                              <td>
+                                <a href="#" class="btn btn-danger btn-sm">
+                                  <i class="fa fa-times"></i>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="d-flex justify-content-end">
+                          <h5>Total: <span class="price text-success">89$</span></h5>
+                        </div>
+                      </div>
+                      <div class="modal-footer border-top-0 d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
+                        <button type="button" class="btn btn-success">Comprar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
         </article>
     </main>

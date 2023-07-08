@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+
 from .models import Usuario,Producto
 
 def index(request):
@@ -6,7 +9,7 @@ def index(request):
     context = {
         'listArtists': listAristas,
     }
-    return render(request, 'dashboard.html', context) 
+    return render(request, 'general/dashboard.html', context) 
 
 # def profileUsers(request):
 #     context = {}
@@ -30,6 +33,33 @@ def producPage(request):
     }
     return render(request,'productDash.html')
 
-def sessionPage(request):
+# def sessionPage(request):
+#     context = {}
+#     return render(request,'general/sessionPage.html')
+
+def loginPage(request):
     context = {}
-    return render(request,'sessionPage.html')
+
+    if request.method == 'POST':
+
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('dashboard')
+            # ...
+        else:
+            # Return an 'invalid login' error message.
+            messages.success(request,('Error al iniciar sesión, intenta nuevamente'))
+            return redirect('loginPage')
+            # ...
+    else:
+        return render(request,'general/sessionPage.html')
+    
+def logoutSession(request):
+    context = {}
+    
+    logout(request)
+    return redirect('dashboard')

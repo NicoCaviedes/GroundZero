@@ -50,36 +50,44 @@
                     <li><a class="dropdown-item" href="{% url 'contact' %}">Contacto</a></li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Perfil
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Visualizar</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Modificar</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Ver Articulos Propios</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Seguridad</a></li>
-                </ul>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'productos' %}">Productos</a>
             </li>
 
             <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
-            <li class="nav-item">
-                <a class="nav-link text-warning" href="{% url 'sessionPage' %}" role="button"
+            {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Perfil
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Visualizar</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Modificar</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Ver Articulos Propios</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Seguridad</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{% url 'logout' %}" role="button"
+                    aria-pressed="true">Cerrar Sesion</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{% url 'loginPage' %}" role="button"
                     aria-pressed="true">Iniciar Sesion</a>
-            </li>
-            <!-- <li class="nav-item">
+                </li>
+            {% endif %}
+                <!-- <li class="nav-item">
           <a class="nav-link text-success" href="/resources/views_html/ContactoEmp.html" role="button" aria-pressed="true">Cerrar Sesion</a>
         </li> -->
         </ul>
