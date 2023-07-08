@@ -67,6 +67,10 @@ class Producto(models.Model):
     @property
     def getNombreCateg(self):
         return self.id_categ_prod.nombre
+    
+    @property
+    def getNombreUsuario(self):
+        return self.id_usuario.__str__
 
 class SesionesEmpleados(models.Model):
     id_sesion_emp   = models.AutoField(primary_key=True)

@@ -50,8 +50,19 @@
                     <li><a class="dropdown-item" href="{% url 'contact' %}">Contacto</a></li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Productos
+                </a>
+                <ul class="dropdown-menu">
+                    {% for categ in listCategs %}
+                        <li><a class="dropdown-item" href="{% url 'productos' categ.nombre %}">{{categ.nombre}}</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        {% endfor %}
+                    <li><a class="dropdown-item" href="{% url 'regProduct' %}">Registrar</a></li>
+                </ul>
             </li>
 
             <!-- AGREGAR SENTENCIA IF PARA CUANDO EL USUARIO INICIO SESION -->
@@ -77,6 +88,10 @@
                     </ul>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="/administrador/" role="button"
+                    aria-pressed="true">Dashboard Admin</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link text-warning" href="{% url 'logout' %}" role="button"
                     aria-pressed="true">Cerrar Sesion</a>
