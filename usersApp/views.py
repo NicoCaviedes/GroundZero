@@ -51,8 +51,6 @@ def verPerfil(request, id_usuario):
 
 def productPage(request, categ):
     categ = CategoriaProducto.objects.get(nombre = categ)
-    print(categ)
-    print(categ.id_categ_prod)
     try:
         listProds = Producto.objects.filter(id_categ_prod = categ)
     except Exception as e:
@@ -66,6 +64,7 @@ def productPage(request, categ):
         'listCategs' : listCategs,
         'listProds' : listProds,
         'categoria' : categ,
+        'lenListProds' : len(listProds)
     }
 
     return render(request,'product/listProduct.html', context)
@@ -183,3 +182,55 @@ def registerUser(request):
     # userLogin = authenticate(username = username, password = password)
     # login(request, userLogin)
     return redirect('dashboard')
+
+@login_required
+def viewProductsUser(request):
+    curUser = Usuario.objects.get(email = request.user.email)
+    listCategs = CategoriaProducto.objects.all()
+    listProdsUser = Producto.objects.filter(id_usuario = curUser)
+
+    context = {
+        'listCategs' : listCategs,
+        'listProds' : listProdsUser,
+    }
+
+    return render(request, 'viewProducts.html', context)
+
+def delProductUser(request, idProd):
+
+    product = Producto.objects.get(id_prod = idProd)
+    product.delete()
+    return redirect('viewProd')
+
+@login_required
+def modProductUser(request, idProd):
+    context = {}
+    product = Producto.objects.get(id_prod = idProd)
+    listCategs = CategoriaProducto.objects.all()
+
+    context = {
+        'listCategs' : listCategs,
+        'product' : product,
+    }
+
+    if request.method == 'POST': 
+
+        product.nombre = request.POST['nombre']
+        product.precio = request.POST['precio']
+        product.stock = request.POST['stock']
+        product.id_categ_prod = CategoriaProducto.objects.get(id_categ_prod = request.POST['idCategProd'])
+        product.img_producto = request.POST['imgPicker']
+
+        if validacionesProd():
+            product.save()
+            context = {
+                'msgResultadoMod':'¡Se ha realizado correctamente los cambios!'
+            }
+            return redirect('viewProd')
+        else:
+            context = {
+                'msgResultadoMod':'¡Los datos ingresados son incorrectos!'
+            }
+            return render(request, 'product/updateProduct.html', context)
+    else:
+        return render(request, 'product/updateProduct.html', context)

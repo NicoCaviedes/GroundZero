@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
     <link rel="icon" type="image/x-icon" href="{{MEDIA_URL}}logos/GroundZero_Isotipo.png">
     <!-- END LINKS APP -->
 </head>
+
 <body>
     <!-- MODAL CARRITO COMPRA -->
     {% include 'fragments/modalCarrito.html' %}
@@ -25,32 +27,39 @@
     {% include 'fragments/navBar.html' %}
 
     <main>
-        <article class="pb-1">
-
-            <hr class="hr-text" data-content="Lista Productos">
-            <div class="tarjeta ">
-                <h1>{{categoria}}</h1>
-                
-                <section class="container-fluid card-deck pb-3">
-                    {% if listProds != None and lenListProds > 0 %}
+        <article class="pb-5 pt-1 pl-5 pr-5">
+            <hr class="hr-text mb-5" data-content="Lista Productos">
+            {% if listProds != None %}
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID Producto</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Categoria Prod</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         {% for producto in listProds %}
-                            <div class="card">
-                                <img src="{{producto.img_producto.url}}" class="card-img-top" alt="Producto">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{producto.nombre}}</h5>
-                                    <p class="card-text">Precio: {{producto.precio}}</p>
-                                    <p class="card-text">Autor: {{producto.getNombreUsuario}}</p>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="button" class="">Comprar</button>
-                                </div>
-                            </div>
+                            <tr>
+                                <td>{{producto.id_prod}}</td>
+                                <td>{{producto.nombre}}</td>
+                                <td>{{producto.precio}}</td>
+                                <td>{{producto.stock}}</td>
+                                <td>{{producto.getNombreCateg}}</td>
+                                <td><a class="text-black" href="{% url 'updProd' producto.id_prod %}"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                                <td><a class="text-black" href="{% url 'deleteProd' producto.id_prod %}"><i class="fa-solid fa-trash"></i></a></td>
+                            </tr>
                         {% endfor %}
-                    {% else %}
-                        <h3 class="pl-4 font-italic">No hay productos registrados :(</h3>
-                    {% endif %}
-                </section>
-            </div>
+                    </tbody>
+                </table>
+            {% else %}
+                <h3 class="pl-4 font-italic">No hay productos registrados :(</h3>
+                <a href="{% url 'regProduct' %}">Ingresar nuevos productos</a>
+            {% endif %}
         </article>
     </main>
 
@@ -68,4 +77,5 @@
     <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
     <!-- END IMPORT JS FILES -->
 </body>
+
 </html>

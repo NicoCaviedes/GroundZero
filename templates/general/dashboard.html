@@ -103,29 +103,29 @@
         </section>
       </div>
 
-      <div class="tarjeta">
+      <div class="tarjeta" id="Categorias">
         <h1>Conoce nuestra cooperativa </h1> 
         <p>Las obras creadas por cada artista son únicas e inigualables, te invitamos a revisar el catálogo a continuación</p>
         <!-- explora nuestras categorias - Pintura - Orfebreria - Tejido Artistico - Escultura - Fotografia -->
         <section class="row justify-content-center">
           <div class="container-p ">
             <div class="panel active">
-              <h3><a href="#holaas">Explora nuestras categorias</a></h3>
+              <h3><a href="#Categorias">Explora nuestras categorias</a></h3>
             </div>
             <div class="panel">
-              <h3><a href="#holaas">Pinturas</a></h3>
+              <h3><a href="{% url 'productos' 'Pintura' %}">Pinturas</a></h3>
             </div>
             <div class="panel">
-              <h3><a href="#holaas">Orfebrerias</a></h3>
+              <h3><a href="{% url 'productos' 'Orfebreria' %}">Orfebrerias</a></h3>
             </div>
             <div class="panel">
-              <h3><a href="#holaas">Tejidos Artisticos</a></h3>
+              <h3><a href="{% url 'productos' 'Tejido' %}">Tejidos Artisticos</a></h3>
             </div>
             <div class="panel">
-              <h3><a href="#holaas">Esculturas</a></h3>
+              <h3><a href="{% url 'productos' 'Escultura' %}">Esculturas</a></h3>
             </div>
             <div class="panel">
-              <h3><a href="#holaas">Fotografias</a></h3>
+              <h3><a href="{% url 'productos' 'Fotografia' %}">Fotografias</a></h3>
             </div>
           </div>
         </section>

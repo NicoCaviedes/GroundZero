@@ -1,11 +1,92 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- INI LINKS APP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/styleBase.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/productDash.css' %}">
+
+    <link rel="icon" type="image/x-icon" href="{{MEDIA_URL}}logos/GroundZero_Isotipo.png">
+    <!-- END LINKS APP -->
 </head>
 <body>
-    
+
+    <!-- MODAL CARRITO COMPRA -->
+    {% include 'fragments/modalCarrito.html' %}
+    <!-- NAV HTML FRAGMENT -->
+    {% include 'fragments/navBar.html' %}
+
+    <main>
+    <article class="pb-1">
+
+        <hr class="hr-text" data-content="Agregar Producto">
+        <div class="tarjeta">
+            <section class="container-fluid p-5">
+                <div class="row text-center justify-content-center">
+                    <div class="col-6">
+                        {% if msgResultadoMod is not None %}
+                            <h4 class="text-danger font-italic font-weight-bold m-0">{{msgResultadoMod}}</h4>
+                        {% endif %}
+                        <form class="was-validated" action="{% url 'updProd' product.id_prod %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="nameProd">Nombre Producto</label>
+                                <input type="text" class="form-control" id="nameProd" name="nombre" value="{{product.nombre}}" placeholder="Nombre Producto">
+                            </div>
+                            <div class="form-group">
+                                <label for="precioProd">Precio Producto</label>
+                                <input type="number" class="form-control" id="precioProd" min="0" name="precio" value="{{product.precio}}" placeholder="$000.000.000">
+                            </div>
+                            <div class="form-group">
+                                <label for="stockProd">Stock Producto</label>
+                                <input type="number" class="form-control" id="stockProd" name="stock" min="1" value="{{product.stock}}" placeholder="999.999.999">
+                            </div>
+                            <label class="my-1 mr-2" for="categProd">Categoria Producto</label>
+                            <select class="custom-select my-1 mr-sm-2" name="idCategProd" id="categProd">
+                                <option value="{{product.id_categ_prod}}" selected>{{product.getNombreCateg}}</option>
+                                {% for categ in listCategs %}
+                                    {% if categ.id_categ_prod != product.id_categ_prod %}
+                                        <option value="{{categ.id_categ_prod}}">{{categ.nombre}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                            <br><br>
+                            <div class="custom-file">
+                                <label class="custom-file-label" for="validatedCustomFile">Elegir imagen...</label>
+                                <input type="file" class="custom-file-input" name="imgPicker"  value="{{product.img_producto.url}}" id="validatedCustomFile" accept="image/*" required>
+                                <!-- <div class="invalid-feedback">Example invalid custom file feedback</div> -->
+                            </div>
+                            <br><br>
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+    </main>
+
+    {% include 'fragments/footer.html' %}
+
+    <!-- INI IMPORT JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/4d4dfa88bf.js" crossorigin="anonymous"></script>
+    <!-- END IMPORT JS FILES -->
 </body>
 </html>
