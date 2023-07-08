@@ -38,6 +38,7 @@
                                 <h4 class="text-danger font-italic font-weight-bold m-0">{{msgResultadoInsert}}</h4>
                             {% endif %}
                             <form class="was-validated" action="{% url 'regProduct' %}" method="post">
+                                {% csrf_token %}
                                 <div class="form-group">
                                     <label for="nameProd">Nombre Producto</label>
                                     <input type="text" class="form-control" id="nameProd" name="nombre" placeholder="Nombre Producto">
@@ -60,9 +61,11 @@
                                 <br><br>
                                 <div class="custom-file">
                                     <label class="custom-file-label" for="validatedCustomFile">Elegir imagen...</label>
-                                    <input type="file" class="custom-file-input" name="imgPicker" id="validatedCustomFile" accept="image/png" required>
+                                    <input type="file" class="custom-file-input" name="imgPicker" id="validatedCustomFile" accept="image/*" required>
                                     <!-- <div class="invalid-feedback">Example invalid custom file feedback</div> -->
                                 </div>
+                                <br><br>
+                                <button type="submit" class="btn btn-primary">Registrar</button>
                             </form>
                         </div>
                     </div>

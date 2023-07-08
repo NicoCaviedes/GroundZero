@@ -1,4 +1,7 @@
 from django.db import models
+# from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+User=get_user_model()
 
 def upload_location(instance, filename):
     filebase, extension = filename.split('.')
@@ -21,17 +24,18 @@ class Profesiones(models.Model):
 
 class Usuario(models.Model):
     id_usuario      = models.IntegerField(primary_key=True, default=0)
-    rut             = models.CharField(max_length=12, null=False)
+    rut             = models.CharField(max_length=12, null=True)
     nombre          = models.CharField(max_length=20, blank=False, null=False)
     ape_paterno     = models.CharField(max_length=20, blank=False, null=False)
     ape_materno     = models.CharField(max_length=20, blank=False, null=True)
-    fecha_nac       = models.DateField(blank=False, null=False)
+    fecha_nac       = models.DateField(blank=False, null=True)
     telefono        = models.CharField(max_length=9, null=True)
     email           = models.EmailField(unique=True, max_length=30, blank=False, null=False)
     direccion       = models.CharField(max_length=100, blank=False, null=True)
     img_perfil      = models.ImageField(upload_to=upload_location, null=True)
-    calificacion    = models.IntegerField(null=False, default=0)
+    calificacion    = models.IntegerField(null=True, default=0)
     id_prof         = models.ForeignKey(Profesiones, on_delete=models.CASCADE, db_column='id_prof')
+    user            = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.nombre)+" "+str(self.ape_paterno)

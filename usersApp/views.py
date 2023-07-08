@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Usuario,Producto,CategoriaProducto
+from .models import Usuario,Producto,CategoriaProducto,Profesiones
 
 def validacionesProd(producto):
     try:
@@ -140,6 +140,8 @@ def logoutSession(request):
 
 def registerUser(request):
     context = {}
+    defaultProf = Profesiones.objects.all()[0]
+
     username = request.POST["username"]
     first_name = request.POST["firstName"]
     last_name = request.POST["lastName"]
@@ -162,7 +164,15 @@ def registerUser(request):
             is_active = True
         )
 
+    userDetails = Usuario.objects.create(
+        nombre = first_name,
+        ape_paterno = last_name,
+        email = email,
+        id_prof = defaultProf
+    )
+
     user.save()        
+    userDetails.save()
     # userLogin = authenticate(username = username, password = password)
     # login(request, userLogin)
     return redirect('dashboard')
